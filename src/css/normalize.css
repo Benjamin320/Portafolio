@@ -1,0 +1,64 @@
+/* =======================
+   Normalize CSS Básico
+   ======================= */
+
+html {
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%; /* iOS */
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+}
+
+/* Lists */
+ul, ol {
+  list-style: none;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Images */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Form elements */
+button, input, select, textarea {
+  font: inherit;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+/* Tables */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Scroll smooth */
+html {
+  scroll-behavior: smooth;
+}
