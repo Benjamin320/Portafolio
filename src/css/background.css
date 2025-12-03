@@ -6,50 +6,73 @@
     height: 100%;
 }
 
-.layer {
-    position: absolute;
-    top: 50%;
-    left: 70%;
-    transform: translate(-50%, -50%);
-    width: 50%;
-    height: 50%;
-    background-image: url(./assets/traspie.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: bottom;
-    mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+.contenedor-escena {
+  position: absolute;
+  inset: 0;                /* top:0; right:0; bottom:0; left:0; */
+  z-index: 0;              /* debajo del contenido */
+  pointer-events: none;    /* no interpone clicks/hover */
+  user-select: none;
 
 }
-
 
 .montana {
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
-  width: 100vw; /* O 100% si dentro de un contenedor */
-  height: 40%; /* O el alto que quieras */
-  pointer-events: none;
+  width: 100%;
+  height: 40%;
   display: block;
+  pointer-events: none;
 }
 
-.sombra-gradiente {
+.contenedor-escena__img {
   position: absolute;
-  left: 0; right: 0; bottom: 0;
-  height: 120px;
-  /* Gradiente de transparente a color base de tu montaña/página */
-  background: linear-gradient(to bottom, transparent 10%, #242222 90%);
-  z-index: 2;
+  right: 5%;
+  bottom: 27%;
+  width: 45%;
+  height: 70%;
+  display: block;
+  perspective: 400px;
   pointer-events: none;
 }
 
 .personaje {
-  position: absolute;
-  left: 85%;      /* Centra horizontalmente */
-  bottom: 25%;  /* Coloca encima de la montaña */
-  transform: translateX(-85%);
-  height: 90%;  /* Ajusta tamaño del personaje */
-  z-index: 2;
-  mask-image: linear-gradient(to bottom, rgb(130, 130, 130) 80%, transparent 100%);
-  filter: drop-shadow(0px 8px 25px #0008);
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    object-position: bottom;
+    transform-origin: center center;
+    transition: transform 350ms cubic-bezier(.2,.8,.2,1), filter 350ms;
+    will-change: transform;         /* sugiere al navegador optimizar */
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    mask-image: linear-gradient(to bottom, rgb(130, 130, 130) 80%, transparent 100%);
 }
+
+.contenedor-escena__img:hover .personaje {
+    transform: rotateX(15deg);
+    filter: brightness(1.2);
+}
+
+.animate-character {
+    animation: MOVER 4s infinite linear;
+}
+
+@keyframes MOVER {
+    0% {
+      transform: rotateY(0deg);
+    }
+    
+    30% {
+      transform: rotateY(5deg);
+    }
+
+    50% {
+      transform: rotateY(2deg);
+    }
+  
+    100% {
+      transform: rotateY(0deg);
+    }
+  }

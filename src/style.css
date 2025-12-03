@@ -1,7 +1,7 @@
 :root {
   --color-bg: #242222;
   --color-text: #FFFFFF;
-  --color-primary: #6366F1;
+  --color-primary: #97b45a;
   --color-secondary: #A5B4FC;
   --color-accent: #1ea1be;
   --font-size: 1.25rem;
@@ -21,23 +21,6 @@
   --container-max-width: 1200px; /* desktop */
   --container-max-width-mobile: 768px; /* desktop */
   --container-padding: 1rem;     /* espacio lateral */
-}
-
-body {
-  background: var(--color-bg);
-  color: var(--color-text);
-  font-family: 'Inter', sans-serif;
-}
-
-p {
-  font-size: var(--font-size);
-  line-height: 1.5;
-  margin-bottom: var(--spacing-large);
-  margin-top: var(--spacing-large);
-}
-
-h1, h2, h3, h4, h5 {
-  line-height: normal;
 }
 
 .accent {

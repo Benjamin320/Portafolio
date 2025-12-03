@@ -15,15 +15,24 @@ html {
   padding: 0;
 }
 
+p {
+  font-size: var(--font-size);
+  line-height: 1.5;
+  margin-bottom: var(--spacing-large);
+  margin-top: var(--spacing-large);
+}
+
 body {
   margin: 0;
   padding: 0;
-  background-color: var(--bg);
-  color: var(--text);
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: 'Inter', sans-serif;
 }
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
+  line-height: normal;
   font-weight: 600;
 }
 
