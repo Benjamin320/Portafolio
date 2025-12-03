@@ -1,0 +1,55 @@
+#stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.layer {
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 50%;
+    background-image: url(./assets/traspie.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+
+}
+
+
+.montana {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw; /* O 100% si dentro de un contenedor */
+  height: 40%; /* O el alto que quieras */
+  pointer-events: none;
+  display: block;
+}
+
+.sombra-gradiente {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 120px;
+  /* Gradiente de transparente a color base de tu montaña/página */
+  background: linear-gradient(to bottom, transparent 10%, #242222 90%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.personaje {
+  position: absolute;
+  left: 85%;      /* Centra horizontalmente */
+  bottom: 25%;  /* Coloca encima de la montaña */
+  transform: translateX(-85%);
+  height: 90%;  /* Ajusta tamaño del personaje */
+  z-index: 2;
+  mask-image: linear-gradient(to bottom, rgb(130, 130, 130) 80%, transparent 100%);
+  filter: drop-shadow(0px 8px 25px #0008);
+}
