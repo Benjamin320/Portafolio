@@ -1,0 +1,36 @@
+.proyects {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-top: var(--spacing-large);
+    padding-bottom: var(--spacing-large);
+}
+
+.proyects__content {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
+    gap: 1rem;
+    grid-auto-flow: dense; /* se adapta al tamaño si sobra */
+}
+
+.card {
+    border-radius: 15px;
+}
+
+.xl {
+    grid-column: span 3;
+    grid-row: span 3;
+    border: 2px solid var(--color-accent);
+}
+
+.l {
+    grid-column: span 2;
+    grid-row: span 2;
+    background-color: rosybrown;
+}
+
+.s {
+    grid-column: span 1;
+    grid-row: span 2;
+    background-color: brown;
+}
