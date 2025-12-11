@@ -15,8 +15,8 @@ escena.addEventListener("mousemove", (e) => {
 function animate() {
   currentX += (targetX - currentX) * 0.1;
 
-  montanaMain.style.transform = `translateX(${currentX / 120}px)`;
-  montanaSecond.style.transform = `translateX(${currentX / 70}px)`;
+  montanaMain.style.transform = `translateX(${currentX / 100}px)`;
+  montanaSecond.style.transform = `translateX(${currentX / 60}px)`;
   montanaThird.style.transform = `translateX(${currentX / 40}px)`;
   personaje.style.transform = `translateX(${currentX / 20}px)`;
 

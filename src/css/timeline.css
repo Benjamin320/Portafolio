@@ -1,0 +1,41 @@
+.experience__content {
+    margin-top: 2rem;
+}
+
+.timeline {
+    position: relative;
+    padding-left: 4rem;
+
+    &:before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 4px;
+        background-color: var(--color-primary);
+    }
+
+    .timeline__item {
+        position: relative;
+        margin-bottom: 2rem;
+        padding: 2.5rem 1.5rem;
+        background-color: var(--color-bg-secondary);
+        z-index: 100;
+
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 1rem;
+            left: -10px;
+            width: 80px;
+            height: 80px;
+            background-color: var(--color-bg-secondary);
+            transform: rotate(45deg);
+            z-index: -1;
+        }
+    }
+
+
+}
