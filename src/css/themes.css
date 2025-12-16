@@ -1,7 +1,5 @@
 .portafolio {
   position: relative;
-  height: 100vh;
-  mask-image: linear-gradient(to bottom, rgb(59, 52, 52) 80%, transparent 100%);
 }
 
 .theme {
@@ -16,6 +14,24 @@
   padding: 1rem 0.8rem;
   border-radius: 2rem;
   box-shadow: 0 0 3px 3px rgba(81, 81, 81, 0.3);
+  opacity: 0.5;
+}
+
+.theme:hover {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.theme--hidden {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.theme--visible {
+  opacity: 0.5;
+  transform: translateY(0);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .theme button {
@@ -50,4 +66,46 @@
   height: 15px;
   border-radius: 50%;
   cursor: pointer;
+}
+
+/* Modal theme */
+
+.theme-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--color-bg-secondary);
+  border-radius: 1rem;
+  width: 60%;
+  height: 90%;
+  max-width: 600px;
+  max-height: 750px;
+  z-index: 10000;
+  box-shadow: 0 0 10px var(--color-secondary);
+  display: none;
+}
+
+.theme-modal__search {
+  display: flex;
+  align-items: center;
+}
+
+.theme-modal__icon {
+  padding: 0 1rem;
+  color: var(--color-text);
+}
+.theme-modal__icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+.theme-modal__input {
+  flex: 1;
+  border: none;
+  padding: 1rem 0;
+  outline: none;
+  background-color: var(--color-bg-secondary);
+  color: var(--color-text);
+  font-size: 1rem;
 }

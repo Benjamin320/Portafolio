@@ -80,6 +80,37 @@
   margin: 0 auto;
 }
 
+/* .container__title {
+  margin-bottom: var(--spacing-large);
+  margin-top: var(--spacing-large);
+} */
+
+.container__title {
+  font-size: 3rem;
+  font-weight: bold;
+  position: relative;
+  padding-left: 1rem;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.container__title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 5px;
+  background: var(--color-secondary);
+  border-radius: 10px;
+}
+
+.container__title h2 {
+  font-size: 4rem;
+  color: var(--color-secondary);
+}
+
+
 /* Navegación */
 .nav {
   position: fixed;
@@ -165,7 +196,7 @@
 
 .hero--arrow {
   position: absolute;
-  top: calc(100% - 7rem);
+  top: calc(100% - 4rem);
   left: 50%;
   transform: translate(-50%, -100%);
   animation: bounce 2s ease-in-out infinite;

@@ -6,7 +6,7 @@ function drawStars() {
   canvas.width = window.innerWidth * DPR;
   canvas.height = window.innerHeight * DPR;
   canvas.style.width = window.innerWidth + "px";
-  canvas.style.height = window.innerHeight + "px";
+  canvas.style.height = window.innerHeight - window.innerHeight / 7 + "px";
   ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
 
   ctx.clearRect(0, 0, canvas.width, canvas.height);

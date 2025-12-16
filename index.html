@@ -7,7 +7,8 @@
     <title>portafolio</title>
   </head>
   <body>
-    <div class="theme">
+    <!-- Tema -->
+    <div class="theme theme--hidden">
       <button class="theme__button">Cambiar Tema</button>
       <div class="theme__palette">
         <div class="theme__color"></div>
@@ -15,6 +16,17 @@
         <div class="theme__color"></div>
       </div>
     </div>
+
+    <div class="theme-modal">
+      <div class="theme-modal__search">
+        <div class="theme-modal__icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search-icon lucide-search"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </div>
+        <input type="text" placeholder="Buscar tema..." class="theme-modal__input" />
+      </div>
+    </div>
+
+    <!-- Navegación -->
     <header id="navbar" class="nav">
       <main class="nav__container">  
         <h1 class="nav__title">Portafolio</h1>
@@ -28,14 +40,8 @@
       </main>
     </header>
 
+    <!-- Contenido Principal -->
     <main class="portafolio">
-
-      <div class="hero--arrow">
-        <svg width="48" height="48" viewBox="0 0 48 48" fill="ff">
-          <path d="M12 20 L24 32 L36 20" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </div>
-
       <canvas id="stars"></canvas>
 
       <div class="contenedor-escena">
@@ -60,6 +66,11 @@
       </div>
 
       <section class="hero">
+        <div class="hero--arrow">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="ff">
+            <path d="M12 20 L24 32 L36 20" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
         <div class="hero__container container">
           <div class="hero__image">
             <img src="https://avatar.iran.liara.run/public" />
@@ -78,207 +89,248 @@
           </div>
         </div>
       </section>
-    </main>
-    <section class="proyects container">
-      <div class="proyects__title">
-        <h2 class="accent">Mis Proyectos</h2>
-      </div>
-      <div class="proyects__content">
-        <div class="card xl">
-          <div class="card__link">
-            <svg viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>link-external</title> <desc>Created with sketchtool.</desc> <g id="web-app" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="link-external" fill="#000000"> <path d="M6,8 C9.33333333,8 11,8 11,8 C11,8 11,8.66666667 11,10 L6,10 L6,18 L14,18 L14,13 L16,13 L16,18 C16,19.1045695 15.1045695,20 14,20 L6,20 C4.8954305,20 4,19.1045695 4,18 L4,10 C4,8.8954305 4.8954305,8 6,8 Z M16.613961,6 L12,6 L12,4 L20,4 L20,12 L18,12 L18,7.44238816 L12.6642136,12.7781746 L11.25,11.363961 L16.613961,6 Z" id="Shape"> </path> </g> </g> </g></svg>
-          </div>
-          <div class="card__header">
-            <img src="src/assets/test.png" alt="imagen-1">
-            <div class="card__tags">
-              <div class="card__tag">
-                <span class="tag">
-                  <img src="src/assets/svg/html5-original.svg" alt="HTML" class="icon">
-                </span>
-                <span class="tag">
-                  <img src="src/assets/svg/css3-original.svg" alt="HTML" class="icon">
-                </span>
-                <span class="tag">
-                  <img src="src/assets/svg/nodejs-original.svg" alt="HTML" class="icon">
-                </span>
-                <span class="tag">
-                  <img src="src/assets/svg/javascript-original.svg" alt="HTML" class="icon">
-                </span>
+
+      <section class="proyects container">
+        <div class="container__title">
+          <h2 class="accent">Mis Proyectos</h2>
+        </div>
+        <div class="proyects__content">
+          <div class="card xl">
+            <div class="card__link">
+              <svg viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>link-external</title> <desc>Created with sketchtool.</desc> <g id="web-app" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="link-external" fill="#000000"> <path d="M6,8 C9.33333333,8 11,8 11,8 C11,8 11,8.66666667 11,10 L6,10 L6,18 L14,18 L14,13 L16,13 L16,18 C16,19.1045695 15.1045695,20 14,20 L6,20 C4.8954305,20 4,19.1045695 4,18 L4,10 C4,8.8954305 4.8954305,8 6,8 Z M16.613961,6 L12,6 L12,4 L20,4 L20,12 L18,12 L18,7.44238816 L12.6642136,12.7781746 L11.25,11.363961 L16.613961,6 Z" id="Shape"> </path> </g> </g> </g></svg>
+            </div>
+            <div class="card__header">
+              <img src="src/assets/test.png" alt="imagen-1">
+              <div class="card__tags">
+                <div class="card__tag">
+                  <span class="tag">
+                    <img src="src/assets/svg/html5-original.svg" alt="HTML" class="icon">
+                  </span>
+                  <span class="tag">
+                    <img src="src/assets/svg/css3-original.svg" alt="HTML" class="icon">
+                  </span>
+                  <span class="tag">
+                    <img src="src/assets/svg/nodejs-original.svg" alt="HTML" class="icon">
+                  </span>
+                  <span class="tag">
+                    <img src="src/assets/svg/javascript-original.svg" alt="HTML" class="icon">
+                  </span>
+                </div>
+                <span class="date">2022-11-22</span>
               </div>
-              <span class="date">2022-11-22</span>
+            </div>
+            <div class="card__info">
+              <div class="card__content">
+                <h3>Fool's Page</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores voluptatem beatae ut qui accusantium. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi, ad! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia dignissimos eligendi temporibus cupiditate.</p>
+              </div>
+              <div class="card__footer">
+                <div class="card__linksProyect">
+                  <button class="button">Ver Proyecto</button>
+                  <button class="button">Ver Codigo</button>
+                </div>
+                <div class="card__social">
+                  <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-brand-github"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5.315 2.1c.791 -.113 1.9 .145 3.333 .966l.272 .161l.16 .1l.397 -.083a13.3 13.3 0 0 1 4.59 -.08l.456 .08l.396 .083l.161 -.1c1.385 -.84 2.487 -1.17 3.322 -1.148l.164 .008l.147 .017l.076 .014l.05 .011l.144 .047a1 1 0 0 1 .53 .514a5.2 5.2 0 0 1 .397 2.91l-.047 .267l-.046 .196l.123 .163c.574 .795 .93 1.728 1.03 2.707l.023 .295l.007 .272c0 3.855 -1.659 5.883 -4.644 6.68l-.245 .061l-.132 .029l.014 .161l.008 .157l.004 .365l-.002 .213l-.003 3.834a1 1 0 0 1 -.883 .993l-.117 .007h-6a1 1 0 0 1 -.993 -.883l-.007 -.117v-.734c-1.818 .26 -3.03 -.424 -4.11 -1.878l-.535 -.766c-.28 -.396 -.455 -.579 -.589 -.644l-.048 -.019a1 1 0 0 1 .564 -1.918c.642 .188 1.074 .568 1.57 1.239l.538 .769c.76 1.079 1.36 1.459 2.609 1.191l.001 -.678l-.018 -.168a5.03 5.03 0 0 1 -.021 -.824l.017 -.185l.019 -.12l-.108 -.024c-2.976 -.71 -4.703 -2.573 -4.875 -6.139l-.01 -.31l-.004 -.292a5.6 5.6 0 0 1 .908 -3.051l.152 -.222l.122 -.163l-.045 -.196a5.2 5.2 0 0 1 .145 -2.642l.1 -.282l.106 -.253a1 1 0 0 1 .529 -.514l.144 -.047l.154 -.03z" /></svg>
+                  </span>
+                  <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-brand-linkedin"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M17 2a5 5 0 0 1 5 5v10a5 5 0 0 1 -5 5h-10a5 5 0 0 1 -5 -5v-10a5 5 0 0 1 5 -5zm-9 8a1 1 0 0 0 -1 1v5a1 1 0 0 0 2 0v-5a1 1 0 0 0 -1 -1m6 0a3 3 0 0 0 -1.168 .236l-.125 .057a1 1 0 0 0 -1.707 .707v5a1 1 0 0 0 2 0v-3a1 1 0 0 1 2 0v3a1 1 0 0 0 2 0v-3a3 3 0 0 0 -3 -3m-6 -3a1 1 0 0 0 -.993 .883l-.007 .127a1 1 0 0 0 1.993 .117l.007 -.127a1 1 0 0 0 -1 -1" /></svg>
+                  </span>
+                  <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" /><path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /><path d="M16.5 7.5v.01" /></svg>
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="card__info">
-            <div class="card__content">
-              <h3>Fool's Page</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores voluptatem beatae ut qui accusantium. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi, ad! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia dignissimos eligendi temporibus cupiditate.</p>
+          <div class="card l">
+            <div class="card__link">
+              <svg viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>link-external</title> <desc>Created with sketchtool.</desc> <g id="web-app" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="link-external" fill="#000000"> <path d="M6,8 C9.33333333,8 11,8 11,8 C11,8 11,8.66666667 11,10 L6,10 L6,18 L14,18 L14,13 L16,13 L16,18 C16,19.1045695 15.1045695,20 14,20 L6,20 C4.8954305,20 4,19.1045695 4,18 L4,10 C4,8.8954305 4.8954305,8 6,8 Z M16.613961,6 L12,6 L12,4 L20,4 L20,12 L18,12 L18,7.44238816 L12.6642136,12.7781746 L11.25,11.363961 L16.613961,6 Z" id="Shape"> </path> </g> </g> </g></svg>
             </div>
-            <div class="card__footer">
-              <div class="card__linksProyect">
+            <div class="card__header">
+              <img src="src/assets/test.png" alt="imagen-1">
+              <div class="card__tags">
+                <div class="card__tag">
+                  <span class="tag">
+                    <img src="src/assets/svg/html5-original.svg" alt="HTML" class="icon">
+                  </span>
+                  <span class="tag">
+                    <img src="src/assets/svg/css3-original.svg" alt="HTML" class="icon">
+                  </span>
+                  <span class="tag">
+                    <img src="src/assets/svg/javascript-original.svg" alt="HTML" class="icon">
+                  </span>
+                </div>
+                <span class="date">2022-11-22</span>
+              </div>
+            </div>
+            <div class="card__info">
+              <div class="card__content">
+                <h3>Fool's Page</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores voluptatem beatae ut qui accusantium. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi, ad! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia dignissimos eligendi temporibus cupiditate.</p>
+              </div>
+              <div class="card__footer">
                 <button class="button">Ver Proyecto</button>
                 <button class="button">Ver Codigo</button>
               </div>
-              <div class="card__social">
-                <span>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-brand-github"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5.315 2.1c.791 -.113 1.9 .145 3.333 .966l.272 .161l.16 .1l.397 -.083a13.3 13.3 0 0 1 4.59 -.08l.456 .08l.396 .083l.161 -.1c1.385 -.84 2.487 -1.17 3.322 -1.148l.164 .008l.147 .017l.076 .014l.05 .011l.144 .047a1 1 0 0 1 .53 .514a5.2 5.2 0 0 1 .397 2.91l-.047 .267l-.046 .196l.123 .163c.574 .795 .93 1.728 1.03 2.707l.023 .295l.007 .272c0 3.855 -1.659 5.883 -4.644 6.68l-.245 .061l-.132 .029l.014 .161l.008 .157l.004 .365l-.002 .213l-.003 3.834a1 1 0 0 1 -.883 .993l-.117 .007h-6a1 1 0 0 1 -.993 -.883l-.007 -.117v-.734c-1.818 .26 -3.03 -.424 -4.11 -1.878l-.535 -.766c-.28 -.396 -.455 -.579 -.589 -.644l-.048 -.019a1 1 0 0 1 .564 -1.918c.642 .188 1.074 .568 1.57 1.239l.538 .769c.76 1.079 1.36 1.459 2.609 1.191l.001 -.678l-.018 -.168a5.03 5.03 0 0 1 -.021 -.824l.017 -.185l.019 -.12l-.108 -.024c-2.976 -.71 -4.703 -2.573 -4.875 -6.139l-.01 -.31l-.004 -.292a5.6 5.6 0 0 1 .908 -3.051l.152 -.222l.122 -.163l-.045 -.196a5.2 5.2 0 0 1 .145 -2.642l.1 -.282l.106 -.253a1 1 0 0 1 .529 -.514l.144 -.047l.154 -.03z" /></svg>
-                </span>
-                <span>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-brand-linkedin"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M17 2a5 5 0 0 1 5 5v10a5 5 0 0 1 -5 5h-10a5 5 0 0 1 -5 -5v-10a5 5 0 0 1 5 -5zm-9 8a1 1 0 0 0 -1 1v5a1 1 0 0 0 2 0v-5a1 1 0 0 0 -1 -1m6 0a3 3 0 0 0 -1.168 .236l-.125 .057a1 1 0 0 0 -1.707 .707v5a1 1 0 0 0 2 0v-3a1 1 0 0 1 2 0v3a1 1 0 0 0 2 0v-3a3 3 0 0 0 -3 -3m-6 -3a1 1 0 0 0 -.993 .883l-.007 .127a1 1 0 0 0 1.993 .117l.007 -.127a1 1 0 0 0 -1 -1" /></svg>
-                </span>
-                <span>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" /><path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /><path d="M16.5 7.5v.01" /></svg>
-                </span>
+            </div>
+          </div>
+          <div class="card s">
+                      <div class="card__link">
+              <svg viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>link-external</title> <desc>Created with sketchtool.</desc> <g id="web-app" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="link-external" fill="#000000"> <path d="M6,8 C9.33333333,8 11,8 11,8 C11,8 11,8.66666667 11,10 L6,10 L6,18 L14,18 L14,13 L16,13 L16,18 C16,19.1045695 15.1045695,20 14,20 L6,20 C4.8954305,20 4,19.1045695 4,18 L4,10 C4,8.8954305 4.8954305,8 6,8 Z M16.613961,6 L12,6 L12,4 L20,4 L20,12 L18,12 L18,7.44238816 L12.6642136,12.7781746 L11.25,11.363961 L16.613961,6 Z" id="Shape"> </path> </g> </g> </g></svg>
+            </div>
+            <div class="card__header">
+              <img src="src/assets/test.png" alt="imagen-1">
+              <div class="card__tags">
+                <div class="card__tag">
+                  <span class="tag">
+                    <img src="src/assets/svg/html5-original.svg" alt="HTML" class="icon">
+                  </span>
+                  <span class="tag">
+                    <img src="src/assets/svg/css3-original.svg" alt="HTML" class="icon">
+                  </span>
+                  <span class="tag">
+                    <img src="src/assets/svg/nodejs-original.svg" alt="HTML" class="icon">
+                  </span>
+                  <span class="tag">
+                    <img src="src/assets/svg/javascript-original.svg" alt="HTML" class="icon">
+                  </span>
+                </div>
+                <span class="date">2022-11-22</span>
+              </div>
+            </div>
+            <div class="card__info">
+              <div class="card__content">
+                <h3>Fool's Page</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores voluptatem beatae ut qui accusantium. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi, ad! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia dignissimos eligendi temporibus cupiditate.</p>
+              </div>
+              <div class="card__footer">
+                <button class="button">Ver Proyecto</button>
+                <button class="button">Ver Codigo</button>
               </div>
             </div>
           </div>
-        </div>
-        <div class="card l">
-          <div class="card__link">
-            <svg viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>link-external</title> <desc>Created with sketchtool.</desc> <g id="web-app" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="link-external" fill="#000000"> <path d="M6,8 C9.33333333,8 11,8 11,8 C11,8 11,8.66666667 11,10 L6,10 L6,18 L14,18 L14,13 L16,13 L16,18 C16,19.1045695 15.1045695,20 14,20 L6,20 C4.8954305,20 4,19.1045695 4,18 L4,10 C4,8.8954305 4.8954305,8 6,8 Z M16.613961,6 L12,6 L12,4 L20,4 L20,12 L18,12 L18,7.44238816 L12.6642136,12.7781746 L11.25,11.363961 L16.613961,6 Z" id="Shape"> </path> </g> </g> </g></svg>
-          </div>
-          <div class="card__header">
-            <img src="src/assets/test.png" alt="imagen-1">
-            <div class="card__tags">
-              <div class="card__tag">
-                <span class="tag">
-                  <img src="src/assets/svg/html5-original.svg" alt="HTML" class="icon">
-                </span>
-                <span class="tag">
-                  <img src="src/assets/svg/css3-original.svg" alt="HTML" class="icon">
-                </span>
-                <span class="tag">
-                  <img src="src/assets/svg/javascript-original.svg" alt="HTML" class="icon">
-                </span>
+          <div class="card s">
+            <div class="card__link">
+              <svg viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>link-external</title> <desc>Created with sketchtool.</desc> <g id="web-app" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="link-external" fill="#000000"> <path d="M6,8 C9.33333333,8 11,8 11,8 C11,8 11,8.66666667 11,10 L6,10 L6,18 L14,18 L14,13 L16,13 L16,18 C16,19.1045695 15.1045695,20 14,20 L6,20 C4.8954305,20 4,19.1045695 4,18 L4,10 C4,8.8954305 4.8954305,8 6,8 Z M16.613961,6 L12,6 L12,4 L20,4 L20,12 L18,12 L18,7.44238816 L12.6642136,12.7781746 L11.25,11.363961 L16.613961,6 Z" id="Shape"> </path> </g> </g> </g></svg>
+            </div>
+            <div class="card__header">
+              <img src="src/assets/test.png" alt="imagen-1">
+              <div class="card__tags">
+                <div class="card__tag">
+                  <span class="tag">
+                    <img src="src/assets/svg/html5-original.svg" alt="HTML" class="icon">
+                  </span>
+                  <span class="tag">
+                    <img src="src/assets/svg/css3-original.svg" alt="HTML" class="icon">
+                  </span>
+                  <span class="tag">
+                    <img src="src/assets/svg/nodejs-original.svg" alt="HTML" class="icon">
+                  </span>
+                  <span class="tag">
+                    <img src="src/assets/svg/javascript-original.svg" alt="HTML" class="icon">
+                  </span>
+                                  <span class="tag">
+                    <img src="src/assets/svg/react-original.svg" alt="HTML" class="icon">
+                  </span>
+                </div>
+                <span class="date">2022-11-22</span>
               </div>
-              <span class="date">2022-11-22</span>
             </div>
-          </div>
-          <div class="card__info">
-            <div class="card__content">
-              <h3>Fool's Page</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores voluptatem beatae ut qui accusantium. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi, ad! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia dignissimos eligendi temporibus cupiditate.</p>
-            </div>
-            <div class="card__footer">
-              <button class="button">Ver Proyecto</button>
-              <button class="button">Ver Codigo</button>
-            </div>
-          </div>
-        </div>
-        <div class="card s">
-                    <div class="card__link">
-            <svg viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>link-external</title> <desc>Created with sketchtool.</desc> <g id="web-app" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="link-external" fill="#000000"> <path d="M6,8 C9.33333333,8 11,8 11,8 C11,8 11,8.66666667 11,10 L6,10 L6,18 L14,18 L14,13 L16,13 L16,18 C16,19.1045695 15.1045695,20 14,20 L6,20 C4.8954305,20 4,19.1045695 4,18 L4,10 C4,8.8954305 4.8954305,8 6,8 Z M16.613961,6 L12,6 L12,4 L20,4 L20,12 L18,12 L18,7.44238816 L12.6642136,12.7781746 L11.25,11.363961 L16.613961,6 Z" id="Shape"> </path> </g> </g> </g></svg>
-          </div>
-          <div class="card__header">
-            <img src="src/assets/test.png" alt="imagen-1">
-            <div class="card__tags">
-              <div class="card__tag">
-                <span class="tag">
-                  <img src="src/assets/svg/html5-original.svg" alt="HTML" class="icon">
-                </span>
-                <span class="tag">
-                  <img src="src/assets/svg/css3-original.svg" alt="HTML" class="icon">
-                </span>
-                <span class="tag">
-                  <img src="src/assets/svg/nodejs-original.svg" alt="HTML" class="icon">
-                </span>
-                <span class="tag">
-                  <img src="src/assets/svg/javascript-original.svg" alt="HTML" class="icon">
-                </span>
+            <div class="card__info">
+              <div class="card__content">
+                <h3>Fool's Page</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores voluptatem beatae ut qui accusantium. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi, ad! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia dignissimos eligendi temporibus cupiditate.</p>
               </div>
-              <span class="date">2022-11-22</span>
-            </div>
-          </div>
-          <div class="card__info">
-            <div class="card__content">
-              <h3>Fool's Page</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores voluptatem beatae ut qui accusantium. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi, ad! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia dignissimos eligendi temporibus cupiditate.</p>
-            </div>
-            <div class="card__footer">
-              <button class="button">Ver Proyecto</button>
-              <button class="button">Ver Codigo</button>
-            </div>
-          </div>
-        </div>
-        <div class="card s">
-          <div class="card__link">
-            <svg viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>link-external</title> <desc>Created with sketchtool.</desc> <g id="web-app" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="link-external" fill="#000000"> <path d="M6,8 C9.33333333,8 11,8 11,8 C11,8 11,8.66666667 11,10 L6,10 L6,18 L14,18 L14,13 L16,13 L16,18 C16,19.1045695 15.1045695,20 14,20 L6,20 C4.8954305,20 4,19.1045695 4,18 L4,10 C4,8.8954305 4.8954305,8 6,8 Z M16.613961,6 L12,6 L12,4 L20,4 L20,12 L18,12 L18,7.44238816 L12.6642136,12.7781746 L11.25,11.363961 L16.613961,6 Z" id="Shape"> </path> </g> </g> </g></svg>
-          </div>
-          <div class="card__header">
-            <img src="src/assets/test.png" alt="imagen-1">
-            <div class="card__tags">
-              <div class="card__tag">
-                <span class="tag">
-                  <img src="src/assets/svg/html5-original.svg" alt="HTML" class="icon">
-                </span>
-                <span class="tag">
-                  <img src="src/assets/svg/css3-original.svg" alt="HTML" class="icon">
-                </span>
-                <span class="tag">
-                  <img src="src/assets/svg/nodejs-original.svg" alt="HTML" class="icon">
-                </span>
-                <span class="tag">
-                  <img src="src/assets/svg/javascript-original.svg" alt="HTML" class="icon">
-                </span>
-                                <span class="tag">
-                  <img src="src/assets/svg/react-original.svg" alt="HTML" class="icon">
-                </span>
-              </div>
-              <span class="date">2022-11-22</span>
-            </div>
-          </div>
-          <div class="card__info">
-            <div class="card__content">
-              <h3>Fool's Page</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores voluptatem beatae ut qui accusantium. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi, ad! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia dignissimos eligendi temporibus cupiditate.</p>
-            </div>
-            <div class="card__footer">
-              <button class="button">Ver Proyecto</button>
-              <button class="button">Ver Codigo</button>
+              <div class="card__footer">
+                <button class="button">Ver Proyecto</button>
+                <button class="button">Ver Codigo</button>
 
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="experience container">
+        <div class="container__title">
+          <h2 class="accent">Experiencia</h2>
+        </div>
+        <div class="experience__content">
+          <div class="timeline">
+            <div class="timeline__item">
+              <div class="timeline__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-briefcase-business-icon lucide-briefcase-business">
+                  <path d="M12 12h.01"/><path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><path d="M22 13a18.15 18.15 0 0 1-20 0"/><rect width="20" height="14" x="2" y="6" rx="2"/>
+                </svg>
+              </div>
+              <div class="timeline__date">
+                <span class="date">2022-2023</span>
+              </div>
+              <div class="timeline__header">
+                <h3>Desarrollador Web</h3>
+              </div>
+              <div class="timeline__body">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores voluptatem beatae ut qui accusantium, nam fugit consectetur id iure culpa architecto enim praesentium ipsum magnam! Qui aliquam delectus magni, eveniet vel cum ad veniam et rem praesentium sint illum amet.</p>
+              </div>
+            </div>
+            <div class="timeline__item">
+              <div class="timeline__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-briefcase-business-icon lucide-briefcase-business">
+                  <path d="M12 12h.01"/><path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><path d="M22 13a18.15 18.15 0 0 1-20 0"/><rect width="20" height="14" x="2" y="6" rx="2"/>
+                </svg>
+              </div>
+              <div class="timeline__date">
+                <span class="date">2022-2023</span>
+              </div>
+              <div class="timeline__header">
+                <h3>Desarrollador Web</h3>
+              </div>
+              <div class="timeline__body">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores voluptatem beatae ut qui accusantium, nam fugit consectetur id iure culpa architecto enim praesentium ipsum magnam! Qui aliquam delectus magni, eveniet vel cum ad veniam et rem praesentium sint illum amet.</p>
+              </div>
+            </div>
+            <div class="timeline__item">
+              <div class="timeline__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-graduation-cap-icon lucide-graduation-cap">
+                  <path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/>
+                </svg>
+              </div>
+              <div class="timeline__date">
+                <span class="date">2022-2023</span>
+              </div>
+              <div class="timeline__header">
+                <h3>Desarrollador Web</h3>
+              </div>
+              <div class="timeline__body">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores voluptatem beatae ut qui accusantium, nam fugit consectetur id iure culpa architecto enim praesentium ipsum magnam! Qui aliquam delectus magni, eveniet vel cum ad veniam et rem praesentium sint illum amet.</p>
+              </div>
             </div>
           </div>
         </div>
+      </section>
 
-      </div>
-    </section>
-    <section class="experience container">
-      <div class="proyects__title">
-        <h2 class="accent">Experiencia</h2>
-      </div>
-      <div class="experience__content">
-        <div class="timeline">
-          <div class="timeline__item">
-            <div class="timeline__header">
-              <h3>Desarrollador Web</h3>
-              <p>2022-2023</p>
-            </div>
-            <div class="timeline__body">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores voluptatem beatae ut qui accusantium, nam fugit consectetur id iure culpa architecto enim praesentium ipsum magnam! Qui aliquam delectus magni, eveniet vel cum ad veniam et rem praesentium sint illum amet.</p>
-            </div>
+      <section class="about-me container">
+        <div class="container__title">
+          <h2 class="accent">Sobre Mi</h2>
         </div>
-        <div class="timeline__item">
-            <div class="timeline__header">
-              <h3>Desarrollador Web</h3>
-              <p>2022-2023</p>
-            </div>
-            <div class="timeline__body">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores voluptatem beatae ut qui accusantium, nam fugit consectetur id iure culpa architecto enim praesentium ipsum magnam! Qui aliquam delectus magni, eveniet vel cum ad veniam et rem praesentium sint illum amet.</p>
-            </div>
-        </div>
-        <div class="timeline__item">
-            <div class="timeline__header">
-              <h3>Desarrollador Web</h3>
-              <p>2022-2023</p>
-            </div>
-            <div class="timeline__body">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores voluptatem beatae ut qui accusantium, nam fugit consectetur id iure culpa architecto enim praesentium ipsum magnam! Qui aliquam delectus magni, eveniet vel cum ad veniam et rem praesentium sint illum amet.</p>
-            </div>
-        </div>
-      </div>
-    </section>
+        <div class="about-me__content">
+          <div class="about-me__image">
+            <img src="src/assets/me.jpg" alt="Benjamin Soto">
+          </div>
+          <div class="about-me__info">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores voluptatem beatae ut qui accusantium, nam fugit consectetur id iure culpa architecto enim praesentium ipsum magnam! Qui aliquam delectus magni, eveniet vel cum ad veniam et rem praesentium sint illum amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores voluptatem beatae ut qui accusantium, nam fugit consectetur id iure culpa architecto enim praesentium ipsum magnam! Qui aliquam delectus magni, eveniet vel cum ad veniam et rem praesentium sint illum amet.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores voluptatem beatae ut qui accusantium, nam fugit consectetur id iure culpa architecto enim praesentium ipsum magnam! Qui aliquam delectus magni, eveniet vel cum ad veniam et rem praesentium sint illum amet.</p>
+          </div>
+      </section>
+    </main>
 
-    <footer>
-      
+    <!-- Pie de página -->
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2024 Benjamin Soto. Todos los derechos reservados.</p>
+      </div>
     </footer>
     <script type="module" src="/src/main.js"></script>
   </body>
