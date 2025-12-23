@@ -1,0 +1,446 @@
+:root {
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'Fira Mono', ui-monospace, monospace;
+  --font-size: 1rem;
+
+  /* Tamaños base de texto */
+  --font-size-small: 0.875rem;
+
+  /* Espaciados */
+  --spacing-small: 0.5rem;
+  --spacing-medium: 1rem;
+  --spacing-large: 2rem;
+
+  /* Contenedor principal */
+  --container-max-width: 1100px; /* desktop */
+  --container-max-width-mobile: 768px; /* desktop */
+  --container-padding: 1rem;     /* espacio lateral */
+}
+
+
+
+.accent {
+  color: var(--color-primary);
+}
+
+.spacing {
+  margin-bottom: var(--spacing-large);
+  margin-top: var(--spacing-large);
+}
+
+.button__nav {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+
+.button__nav svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.button__nav svg path {
+  fill: var(--color-tertiary);
+}
+
+.button {
+  cursor: pointer;
+  position: relative;
+  background-color: transparent;
+  color:var(--color-tertiary);
+  border: 2px solid var(--color-tertiary);
+  padding: 10px 24px;
+  border-radius: 0.75rem;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+  font-weight: 700;
+  overflow: hidden;
+}
+
+.button::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%; /* valor heredado */
+  scale: 0;
+  z-index: -1;
+  background-color: var(--color-tertiary);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.button:hover::after {
+  scale: 8;
+}
+
+.button:hover {
+  color: var(--color-bg);
+  scale: 1.1;
+  box-shadow: 0 0 20px rgb(193, 163, 98, 0.4);
+}
+
+.button:active {
+  scale: 1;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* .container__title {
+  margin-bottom: var(--spacing-large);
+  margin-top: var(--spacing-large);
+} */
+
+.container__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  position: relative;
+  padding-left: 1rem;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+.container__title h2 {
+  position: relative;
+  background-color: var(--bg-tags);
+  color: var(--color-secondary);
+  padding: 1rem;
+  z-index: 1;
+}
+
+.container__title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 2px;
+  width: 50%;
+  background: var(--color-secondary);
+  border-radius: 10px;
+  z-index: 0;
+}
+
+.container__title::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 2px;
+  width: 50%;
+  background: var(--color-secondary);
+  border-radius: 10px;
+  z-index: 0;
+}
+
+
+/* Navegación */
+.nav {
+  position: fixed;
+  /* background-color: var(--color-bg); */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2000;
+  /* backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px); */
+  /* box-shadow: #e0e0e03e 0px 0px 10px 0px; */
+  transition: opacity 0.5s ease-in-out, background-color 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+
+.nav--blur {
+  backdrop-filter: blur(12px); /* deja borroso lo que esta atras del nav */
+  -webkit-backdrop-filter: blur(12px);
+  background-color: var(--color-bg);
+  opacity: 0.8;
+}
+
+.nav--blur:hover {
+  opacity: 1;
+}
+
+.nav__container {
+  display: flex;
+  max-width: var(--container-max-width);
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  min-height: 5rem;
+}
+
+.nav__title {
+  color: var(--color-primary);
+}
+
+
+.nav__list {
+  display: flex;
+  list-style: none;
+  gap: 0.75rem;
+}
+
+.nav__item {
+    color: var(--color-text);
+    font-weight: 700;
+}
+
+/* Hero Section*/
+
+.hero {
+  display: flex;
+  position: relative;
+  min-height: 100vh;
+  justify-items: center;
+  background: var(--primary);
+  margin-bottom: 5rem;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: -50%;      /* puedes usar top o bottom según quieras */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 100%;
+  background: radial-gradient(
+    circle,
+    var(--color-shadow),
+    transparent 70%
+  );
+
+  filter: blur(12px);
+  pointer-events: none; /* importante para que no bloquee clics */
+  z-index: -1;          /* detrás del nav */
+}
+
+.hero__container {
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  transform: translate(-15%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 40%;
+  margin: auto;
+  padding: 1.5rem;
+  gap: 2rem;
+  background-color: var(--color-bg-hero);
+  backdrop-filter: blur(12px);
+  border-radius: 2rem;
+  z-index: 1000;
+}
+
+.hero--arrow {
+  position: absolute;
+  top: calc(100% - 2.5rem);
+  left: 50%;
+  transform: translateX(-50%) translateY(0);
+  animation: bounce 2s ease-in-out infinite;
+  z-index: 1000;
+}
+
+.hero--arrow svg path {
+  stroke: var(--color-text);
+}
+
+.hero__header {
+  margin-bottom: var(--spacing-large);
+}
+
+.hero__title {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.hero__subtitle {
+  font-size: 2rem;
+}
+
+.hero__links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.hero__image {
+  width: 30%;
+}
+
+.hero__image img {
+  margin: auto;
+  object-fit: contain;
+}
+
+body, .contenedor-escena .montana {
+  transition: background-color 0.5s ease-in-out, box-shadow 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+.portafolio section {
+  --bg-secondary: var(--color-primary);
+  --bg-tags: var(--color-bg);
+  --bg-main: var(--color-bg-secondary);
+  --bg-border: var(--color-border);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.portafolio section:nth-child(even) {
+  background-color: var(--color-bg-secondary);
+  --bg-main: var(--color-bg);
+  --bg-border: var(--color-border);
+  --bg-secondary: var(--color-primary);
+  --bg-tags: var(--color-bg-secondary);
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateX(-50%) translateY(-5px);;
+  }
+  
+  50% {
+    transform: translateX(-50%) translateY(-30px);
+  }
+
+  100% {
+    transform: translateX(-50%) translateY(-5px);
+  }
+}
+
+@media screen and (max-width: 1025px) { /* Si la pantalla es menor a 768px */
+  .container {
+    max-width: 700px;
+  }
+
+  .nav__container {
+    max-width: 700px;
+  }
+
+  .hero__container {
+    width: 100%;
+    max-width: 700px;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -40%);
+  }
+
+  .nav__menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-200vh);
+    height: 100vh;
+    width: 55%;
+    background-color: var(--color-bg);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    opacity: 1;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .nav--open {
+    transform: translateX(0vh);
+  }
+
+  .nav__list {
+    flex-direction: column;
+    gap: 0.5rem;
+    /* padding: 1rem; */
+  }
+
+  .nav__item {
+    color: var(--color-text);
+    font-weight: 700;
+    padding: 0.7rem;
+    cursor: pointer;
+  }
+
+  .nav__item:hover {
+    color: var(--color-bg);
+    background-color: var(--color-text);
+  }
+
+  .hero__container {
+    max-width: 90%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    flex-direction: row-reverse;
+  }
+
+  .hero__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  .hero__subtitle {
+    font-size: 1.25rem;
+  }
+
+  .button__nav {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 450px;
+  }
+
+  .hero__container {
+    max-width: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    flex-direction: column;
+  }
+
+  .hero__image {
+    width: 35%;
+  }
+
+  .hero__header {
+    margin-bottom: 1rem;
+  }
+
+  .spacing {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+
+}
+
+@media screen and (max-width: 450px) {
+  .container {
+    max-width: 350px;
+  }
+
+  .nav__container {
+    max-width: 350px;
+  }
+
+  .hero__image {
+    width: 50%;
+  }
+}
+
+@media screen and (min-height: 800px) and (max-width: 1024px) {
+  .hero {
+    min-height: 80vh;
+  }
+}
+
+

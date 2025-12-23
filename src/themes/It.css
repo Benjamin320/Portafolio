@@ -1,0 +1,18 @@
+html[data-theme="it"], div[data-theme="it"] {
+  --color-bg: #ececec;
+  --color-bg-secondary: #e7e6e4;
+  --color-text: #191717;
+  --color-primary: #e94735;
+  --color-secondary: #d3662f;
+  --color-tertiary: #0e0e0c;
+  --color-accent: #ce677b;
+
+  --montana-first-color: #d0cece;
+  --montana-second-color: #b2836e;
+  --montana-third-color: #cd7555;
+
+  --color-shadow: #cba591;
+  --color-bg-hero: #1c1c1c13;
+
+  --color-border: #b9a6a684;
+}

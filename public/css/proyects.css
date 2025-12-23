@@ -1,18 +1,11 @@
-.proyects {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+/* .proyects {
     padding-top: var(--spacing-large);
     padding-bottom: var(--spacing-large);
-}
-
-.proyects__title h2 {
-    font-size: 3rem;
-}
+} */
 
 .proyects__content {
     display: grid;
-    grid-template-columns: repeat(4, minmax(220px, 1fr));
+    grid-template-columns: repeat(6, 1fr);
     grid-auto-rows: minmax(120px, auto); /* altura adaptable */
     gap: 1rem;
     grid-auto-flow: dense; /* se adapta al tamaño si sobra */
@@ -25,14 +18,14 @@
     align-items: center;
     justify-content: space-between;
     border-radius: 15px;
-    background-color: #333333;
-    border: 1px solid #4c4c4c;
+    background-color: var(--bg-main);
+    border: 1px solid var(--bg-border);
     overflow: hidden;
     height: 100%;
 }
 
 .xl {
-    grid-column: span 4;
+    grid-column: span 6;
     grid-row: span 3;
 
 }
@@ -44,8 +37,9 @@
 }
 
 .s {
-    grid-column: span 1;
-    grid-row: span 2;
+    grid-column: span 4;
+    grid-row: span 1;
+    flex-direction: row;
 }
 
 .card__link {
@@ -71,10 +65,12 @@
 }
 
 .card__header {
+    position: relative;
     display: flex;
     flex-direction: column;
     width: 100%;
     gap: 0.7rem;
+    overflow: hidden;
 }
 
 .card__header > img {
@@ -83,7 +79,6 @@
     max-height: 180px; /* opcional para controlar */
     object-fit: cover;
     transition: scale 0.5s ease-in-out;
-    overflow: hidden;
 }
 
 .card__header > img:hover {
@@ -96,7 +91,8 @@
     justify-content: space-between;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.7rem 1rem;
+    padding: 0.7rem 0;
+    width: 100%;
 }
 
 .card__tag {
@@ -106,10 +102,10 @@
 }
 
 .date {
-    color: var(--color-primary);
-    font-size: 1rem;
-    font-weight: 700;
-    opacity: 0.7;
+  font-family: monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  opacity: 0.6;
 }
 
 .card__info {
@@ -125,18 +121,16 @@
 }
 
 .card__content h3 {
-    color: var(--color-primary);
-    font-size: 2rem;
+    color: var(--color-secondary);
 }
 
 .card__content p {
     color: var(--color-text);
-    font-size: 1rem;
     overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
+    /* text-overflow: ellipsis; */
+    display: block;
+    /* -webkit-line-clamp: 4; */
+    /* -webkit-box-orient: vertical; */
 }
 
 .card__footer {
@@ -144,7 +138,7 @@
     flex-direction: row;
     width: 100%;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     gap: 0.5rem;
     padding: 0.7rem 0;
 }
@@ -163,7 +157,7 @@
 }
 
 .card__linksProyect button {
-    width: 45%;
+    width: 49%;
     max-width: 350px;
     min-width: 100px;
 }
@@ -184,18 +178,23 @@
 /*Reglas card tamaño l*/
 
 .card.l .card__header {
-    flex-direction: column-reverse;
+    flex: 4;
+    display: flex;
+}
+
+.card.l .card__header > img {
+    max-height: 100%;
 }
 
 .card.l .card__info {
-    flex: 1;
+    flex: 6;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
 
 .card.l .card__info .card__footer button {
-    width: 45%;
+    width: 48%;
 }
 
 /*Reglas card tamaño s*/
@@ -203,5 +202,60 @@
 .card.s .card__tags {
     flex-direction: column-reverse;
     align-items: flex-start;
+}
+
+.card.s .card__header {
+    flex: 3;
+    height: 100%;
+}
+
+.card.s .card__info {
+    flex: 7;
+}
+
+.card.s .card__info .card__tags {
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.card.s .card__header > img {
+    max-height: 100%;
+}
+
+.card.s .card__info .card__footer button {
+    width: 48%;
+}
+
+@media screen and (max-width: 1024px) { /* Si la pantalla es menor a 768px */
+  .proyects__content {
+      grid-template-columns: 1fr;
+      grid-template-rows: none;
+  }
+
+  .xl, .l, .s {
+    flex-direction: column;
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .card.s .card__info {
+    flex: 1;
+  }
+
+  .card.l .card__info {
+    flex: 1;
+  }
+
+  .card.xl .card__info {
+    flex: 1;
+  }
+
+  .xl .card__info .card__footer .card__social {
+    display: none;
+  }
+
+  .xl .card__info .card__footer .card__linksProyect {
+    width: 100%;
+  }
 }
 

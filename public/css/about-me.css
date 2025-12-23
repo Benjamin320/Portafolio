@@ -20,7 +20,6 @@
 .about-me__info p {
     position: relative;
     color: var(--color-text);
-    font-size: 1.2rem;
     line-height: 1.6;
     margin-bottom: 1.5rem;
 }
@@ -40,4 +39,18 @@
     width: 10px;
     height: 10px;
     border-radius: 50%;
+}
+
+@media screen and (max-width: 768px) {
+    .about-me__content {
+        flex-direction: column;
+    }
+
+    .about-me__image {
+        flex: 2;
+    }
+
+    .about-me__info {
+        flex: 8;
+    }
 }

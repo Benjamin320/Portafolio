@@ -1,0 +1,18 @@
+html[data-theme="jade-city"], 
+div[data-theme="jade-city"] {
+  --color-bg: #242222;
+  --color-bg-secondary: #333333;
+  --color-text: #FFFFFF;
+  --color-primary: #97b45a;
+  --color-secondary: #67bf8a;
+  --color-tertiary: #ac9a39;
+  --color-accent: #97b45a;
+  --montana-first-color: #201f1f;
+  --montana-second-color: #203036;
+  --montana-third-color: #303c42;
+
+  --color-shadow: #e2e2e25a;
+  --color-bg-hero: #f1f1f110;
+
+  --color-border: #bbbbbb3e;
+}

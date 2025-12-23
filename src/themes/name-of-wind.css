@@ -1,0 +1,18 @@
+html[data-theme="name-of-wind"], div[data-theme="name-of-wind"] {
+  --color-bg: #efeded;
+  --color-bg-secondary: #e4e4e4;
+  --color-text: #1e1d1d;
+  --color-primary: #bde145;
+  --color-secondary: #aeb840;
+  --color-tertiary: #63882a;
+  --color-accent: #41aa89;
+
+  --montana-first-color: #c1c8a1;
+  --montana-second-color: #c1c8a1;
+  --montana-third-color: #c1c8a1;
+
+  --color-shadow: #eee69a;
+  --color-bg-hero: #3535350c;
+
+  --color-border: #abbdb161;
+}

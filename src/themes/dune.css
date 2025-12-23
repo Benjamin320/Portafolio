@@ -1,0 +1,18 @@
+html[data-theme="dune"], div[data-theme="dune"] {
+  --color-bg: #d1b192;
+  --color-bg-secondary: #f8ead4;
+  --color-text: #101010;
+  --color-primary: #a05006;
+  --color-secondary: #181409;
+  --color-tertiary: #724f03;
+  --color-accent: #ff961d;
+
+  --montana-first-color: #d29653;
+  --montana-second-color: #9e7e4f;
+  --montana-third-color: #b9af9a;
+
+  --color-shadow: #ca8d5a;
+  --color-bg-hero: #e0c6a433;
+
+  --color-border: #8a806489;
+}

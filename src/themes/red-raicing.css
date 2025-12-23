@@ -1,0 +1,18 @@
+html[data-theme="red-raicing"], div[data-theme="red-raicing"] {
+  --color-bg: #5c0d0d;
+  --color-bg-secondary: #703127;
+  --color-text: #d9d9d9;
+  --color-primary: #d8d254;
+  --color-secondary: #c8d543;
+  --color-tertiary: #dcc43c;
+  --color-accent: #dfb84e;
+
+  --montana-first-color: #952525;
+  --montana-second-color: #9b513d;
+  --montana-third-color: #907c40;
+
+  --color-shadow: #d1ea986c;
+  --color-bg-hero: #d9d9d91e;
+
+  --color-border: #ce987d3b;
+}

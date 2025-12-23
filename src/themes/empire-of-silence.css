@@ -1,0 +1,18 @@
+html[data-theme="empire-of-silence"], div[data-theme="empire-of-silence"] {
+  --color-bg: #171716;
+  --color-bg-secondary: #333333;
+  --color-text: #f8f8f8;
+  --color-primary: #8b31bc;
+  --color-secondary: #a83cbb;
+  --color-tertiary: #e36ad1;
+  --color-accent: #895ce4;
+
+  --montana-first-color: #352737;
+  --montana-second-color: #a795ac;
+  --montana-third-color: #533c50;
+
+  --color-shadow: #d6d6d66d;
+  --color-bg-hero: #f1f1f121;
+
+  --color-border: #c8c8c852;
+}

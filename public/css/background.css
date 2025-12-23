@@ -8,14 +8,14 @@
 
 .contenedor-escena {
   position: absolute;
-  height: 100vh;
+  height: 107vh;
   width: 107%;
   inset: 0;                /* top:0; right:0; bottom:0; left:0; */
   z-index: 0;              /* debajo del contenido */    /* no interpone clicks/hover */
   user-select: none;
   overflow: hidden;
   overflow-wrap: unset;
-  mask-image: linear-gradient(to bottom, rgb(59, 52, 52) 80%, transparent 100%);
+  mask-image: linear-gradient(to bottom, var(--color-bg) 85%, transparent 100%);
 
 }
 
@@ -33,34 +33,37 @@
 
 .montana-main path{
     z-index: 3;
-    fill: rgb(23, 32, 35);
+    fill: var(--montana-first-color);
+    /* transition: fill 0.5s ease-in-out; */
 }
 
 .montana-second path{
     z-index: 1;
-    fill: #203036;
+    fill: var(--montana-second-color);
+    /* transition: fill 0.5s ease-in-out; */
 }
 
 .montana-third path{
     z-index: 0;
-    fill: #303c42;
+    fill: var(--montana-third-color);
+    /* transition: fill 0.5s ease-in-out; */
 }
 
 .contenedor-escena__img {
   position: absolute;
-  right: 15%;
-  bottom: 27%;
-  max-width: 60%;
-  height: 90%;
-  display: block;
+  right: -2%;
+  bottom: 28%;
+  width: 63%;
+  height: 63%;
+  display: flex;
+  justify-content: center;
   perspective: 400px;
   pointer-events: none;
-    transition: transform 0.5s cubic-bezier(.2,.8,.2,1), filter 350ms;
+  transition: transform 0.5s cubic-bezier(.2,.8,.2,1), filter 350ms;
 }
 
 .personaje {
-    height: 100%;
-    width: 100%;
+
     object-fit: contain;
     object-position: bottom;
     transform-origin: center center;
@@ -70,3 +73,42 @@
     transform-style: preserve-3d;
     mask-image: linear-gradient(to bottom, rgb(130, 130, 130) 80%, transparent 100%);
 }
+
+@media screen and (max-width: 1025px) { /* Si la pantalla es menor a 768px */
+  .montana {
+    left: 0;
+    height: 34%;
+  }
+
+  .personaje {
+    width: 90%;
+  }
+
+  .contenedor-escena__img {
+    left: 0;
+    bottom: 0;
+  }
+
+  .contenedor-escena {
+    height: 100vh;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .contenedor-escena__img {
+    left: 0;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media screen and (min-height: 800px) and (max-width: 1024px) {
+  .contenedor-escena {
+    height: 80vh;
+  }
+}
+
+

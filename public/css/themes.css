@@ -1,5 +1,10 @@
 .portafolio {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
 }
 
 .theme {
@@ -36,6 +41,7 @@
 
 .theme button {
     color: var(--color-text);
+    pointer-events: none;
 }
 
 .theme__palette {
@@ -47,6 +53,8 @@
   background-color: var(--color-bg);
   padding: 0 0.5rem;
   border-radius: 1em;
+  height: 24px;
+  width: 77px;
 }
 
 .theme__palette .theme__color:nth-child(1)  {
@@ -61,7 +69,7 @@
   background-color: var(--color-tertiary);
 }
 
-.theme .theme__color {
+.theme__palette .theme__color {
   width: 15px;
   height: 15px;
   border-radius: 50%;
@@ -74,16 +82,29 @@
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(0.95);
   background-color: var(--color-bg-secondary);
   border-radius: 1rem;
   width: 60%;
-  height: 90%;
+  height: 80vh;
   max-width: 600px;
-  max-height: 750px;
+  max-height: 80vh;
   z-index: 10000;
   box-shadow: 0 0 10px var(--color-secondary);
-  display: none;
+  overflow: hidden;
+  opacity: 0;
+  /* visibility: hidden; */
+  pointer-events: none;
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease;
+}
+
+.theme-modal--visible {
+  opacity: 1;
+  /* visibility: visible; */
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
 }
 
 .theme-modal__search {
@@ -95,6 +116,7 @@
   padding: 0 1rem;
   color: var(--color-text);
 }
+
 .theme-modal__icon svg {
   width: 16px;
   height: 16px;
@@ -103,9 +125,35 @@
 .theme-modal__input {
   flex: 1;
   border: none;
-  padding: 1rem 0;
+  padding: 1rem 1rem 1rem 0;
   outline: none;
   background-color: var(--color-bg-secondary);
   color: var(--color-text);
-  font-size: 1rem;
+}
+
+.theme-modal__colors {
+  display: grid;
+  overflow-y: scroll;
+  cursor: pointer;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-secondary) transparent;
+  max-height: calc(80vh - 3.8rem);
+}
+
+.theme-modal__color:hover {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.theme-modal__color {
+  display: grid;
+  grid-template-columns: 1fr auto auto auto;
+  align-items: center;
+  padding: 1rem;
+  font-weight: 600;
+}
+
+.theme-modal__color > div {
+  pointer-events: none;
 }

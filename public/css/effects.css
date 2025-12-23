@@ -1,0 +1,11 @@
+.fade-out {
+
+}
+
+.fade-in {
+    
+}
+
+.not-animated {
+    transition: none;
+}
