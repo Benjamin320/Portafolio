@@ -1,0 +1,35 @@
+.technologies__content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* centra cada fila */
+  gap: 1rem;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.technologies__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 120px;
+    height: 120px;
+    background-color: var(--bg-main);
+}
+
+.technologies__card p {
+    font-weight: bold;
+}
+
+.technologies__card img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+@media screen and (max-width: 450px) {
+    .technologies__content {
+        width: 100%;
+    }
+    
+}

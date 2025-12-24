@@ -1,0 +1,9 @@
+.tag {
+    border-radius: 5px;
+    color: var(--color-text);
+}
+
+.icon {
+    width: 2rem;
+    height: 2rem;
+}

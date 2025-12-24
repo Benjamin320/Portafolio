@@ -1,0 +1,120 @@
+/* =======================
+   Normalize CSS Básico
+   ======================= */
+
+html {
+  box-sizing: border-box;
+  width: 100%;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%; /* iOS */
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #00000000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--color-text);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  line-height: normal;
+  font-weight: 600;
+  font-family: var(--font-mono);
+}
+
+h1 { font-size: 3.5rem; }
+h2 { font-size: 2.5rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.25rem; }
+
+code, pre {
+  font-family: var(--font-mono);
+}
+
+/* Lists */
+ul, ol {
+  list-style: none;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Images */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Form elements */
+button, input, select, textarea {
+  font: inherit;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+/* Tables */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Scroll smooth */
+html {
+  scroll-behavior: smooth;
+}
+
+@media screen and (max-width: 768px) { /* Si la pantalla es menor a 768px */
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.25rem; }
+
+  p {
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+
+  button {
+    font-size: 0.875rem;
+  }
+
+}
