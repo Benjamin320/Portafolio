@@ -131,8 +131,8 @@
   height: 100%;
 
   /* PNG blanco sobre fondo transparente */
-  -webkit-mask: url("/traspie.png") no-repeat center / contain;
-  mask: url("/traspie.png") no-repeat center / contain;
+  -webkit-mask: url("https://benjamin320.github.io/Portafolio/traspie.png") no-repeat center / contain;
+  mask: url("https://benjamin320.github.io/Portafolio/traspie.png") no-repeat center / contain;
 
   background-color: var(--color-bg); /* Aquí cambias el color dinámicamente */
 }
