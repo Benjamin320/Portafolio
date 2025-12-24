@@ -12,7 +12,7 @@
         const link = document.createElement("link");
         if (theme) {
           link.rel = "stylesheet";
-          link.href = `/css/themes/${theme}.css`; // archivos en public/css/themes
+          link.href = `./css/themes/${theme}.css`; // archivos en public/css/themes
           document.head.appendChild(link);
           document.documentElement.setAttribute("data-theme", theme);
         }
