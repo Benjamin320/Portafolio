@@ -1,11 +1,12 @@
-const fs = require("fs");
-const path = require("path");
-const dist = path.resolve(__dirname, "..", "dist");
-const from = path.join(dist, "index.html");
-const to = path.join(dist, "404.html");
+import { copyFileSync, existsSync } from "fs";
+import { resolve, join } from "path";
 
-if (fs.existsSync(from)) {
-  fs.copyFileSync(from, to);
+const dist = resolve(".", "dist");
+const from = join(dist, "index.html");
+const to = join(dist, "404.html");
+
+if (existsSync(from)) {
+  copyFileSync(from, to);
   console.log("404.html creado");
 } else {
   console.warn(
