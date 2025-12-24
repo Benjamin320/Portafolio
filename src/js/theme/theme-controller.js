@@ -10,7 +10,7 @@
    Usa: importa este módulo desde tu main.js (si no lo haces ya).
 */
 
-import { themeList } from "../themes.js"; // ajusta la ruta si tu themes.js está en otra carpeta
+import { themeList } from "./themes.js"; // ajusta la ruta si tu themes.js está en otra carpeta
 
 const modalColors = document.querySelector(".theme-modal__colors");
 const modal = document.querySelector(".theme-modal");
