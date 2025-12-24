@@ -8,6 +8,7 @@ import "./themes/mistborn.css";
 import "./themes/red-raicing.css";
 import "./themes/ship-of-magic.css";
 import "./js/utils.js";
+import "./js/fadeAnimation.js";
 import "./js/background-stars.js";
 import "./js/mouse-events.js";
 import "./js/theme/theme-controller.js";
